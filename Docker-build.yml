@@ -1,0 +1,12 @@
+version: '2.2'
+services:
+  label-studio-mps:
+    container_name: label-studio-mps
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+      args:
+        - author=Velimir Lesikov
+        - username=label-studio
+        - userid=1001
+    image: label-studio-mps:latest

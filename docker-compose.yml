@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  label-studio-mps:
+    container_name: label-studio-mps
+    ports:
+      - '8080:8080'
+    volumes:
+      - './mydata:/label-studio/data'
+    image: label-studio-mps:latest
+    restart: unless-stopped
+    command: label-studio
